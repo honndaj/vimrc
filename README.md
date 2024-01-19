@@ -1,5 +1,5 @@
 - normal模式下ctrl+o，回到上一个跳转的光标
-- action + i or a + range（如复制全部代码：gg + yG; 删除括号内内容：diw）
+- action + i or a + range（如复制全部代码：gg + yG; 删除括号内内容：di(
 - viusal模式选中后p可以替换
 - 批量修改变量名：normal下*匹配当前光标下单词，对一个其中一个cw修改，然后对每一个.来重复cw。
 - 行居中 zz ，zt，zb
