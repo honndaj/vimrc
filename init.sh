@@ -1,6 +1,7 @@
 # 如果脚本用root权限运行。这导致ssh公钥在是root的，所以git clone需要加sudo
+# 所以为了方便还是直接复制以下命令到terminal运行比较方便
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-sudo echo '# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+sudo bash -c ' echo "# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
@@ -13,8 +14,8 @@ deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe m
 
 # 预发布软件源，不建议启用
 # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
-# # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse' > /etc/apt/sources.list
-apt update
+# # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse" > /etc/apt/sources.list '
+sudo apt update
 
 sudo apt install -y vim openssh-server git net-tools
 
